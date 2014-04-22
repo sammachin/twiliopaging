@@ -1,0 +1,3 @@
+heroku config:set PUSHER_APPID=
+heroku config:set PUSHER_KEY=
+heroku config:set PUSHER_SECRET=

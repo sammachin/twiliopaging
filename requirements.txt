@@ -1,4 +1,9 @@
+# For server on heroku
 CherryPy==3.3.0
 wsgiref==0.1.2
 twilio==3.6.6
 pusher==0.8
+
+# For client
+soco==0.6
+pusherclient==0.2.0
