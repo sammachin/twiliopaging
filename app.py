@@ -6,9 +6,9 @@ from twilio import twiml
 import urllib
 
 
-pusher_appid = 'PUSHER_APPID' in os.environ
-pusher_key = 'PUSHER_KEY' in os.environ
-pusher_secret = 'PUSHER_SECRET' in os.environ
+pusher_appid = os.environ['PUSHER_APPID']
+pusher_key = os.environ['PUSHER_KEY']  
+pusher_secret = os.environ['PUSHER_SECRET']
 
 print "Pusher vars"
 print pusher_appid
