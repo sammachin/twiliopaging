@@ -10,6 +10,11 @@ pusher_appid = 'PUSHER_APPID' in os.environ
 pusher_key = 'PUSHER_KEY' in os.environ
 pusher_secret = 'PUSHER_SECRET' in os.environ
 
+print "Pusher vars"
+print pusher_appid
+print pusher_key
+print pusher_secret
+
 def fake_wait_for_occupied_port(host, port): 
 	return
 
@@ -23,7 +28,6 @@ class Start(object):
 		return str(r)
 	def record(self, var=None, **params):
 		url = urllib.unquote(cherrypy.request.params['RecordingUrl'])
-		print url
 		p = pusher.Pusher(app_id=pusher_appid, key=pusher_key, secret=pusher_secret)
 		p['airpage'].trigger('message', {'url': url})
 		r = twiml.Response()
